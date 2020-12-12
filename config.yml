@@ -1,36 +1,55 @@
-sites:
-#   name: discordservers.com
-#   url: https://discordservers.com
-#   login: obz@delphicraft.net
+#   site: discordservers.com
+#   username: obz@delphicraft.net
 #   password: mRhDx2KIeQUAU8%4
-#   page: https://discordservers.com/panel/210536719844376576/bump
-#   name: minecraft-server.net
-#   url: https://minecraft-server.net
-#   login: delphicraft
+#   url_login: https://discordservers.com
+#   url_bump: https://discordservers.com/server/210536719844376576/bump
+
+#   site: mc-servers.com
+#   username: delphicraft
+#   password: 9#dGHJqdu7Yg2ep
+#   vote_name: obzidi4n
+#   url_login: https://mc-servers.com/login
+#   url_bump: https://mc-servers.com/my_servers?bump=3655
+#   url_vote: https://mc-servers.com/mcvote/3655/
+  
+#   site: minecraft-server.net
+#   username: delphicraft
+#   password: UV7tysxhaP9uf9z
+#   vote_name: obzidi4n
+#   url_bump: https://minecraft-server.net/details/Delphicraft/
+#   url_vote: https://minecraft-server.net/vote/delphicraft/
+#   url_login: https://minecraft-server.net/user_cpl/
+
+#   site: planetminecraft.com
+#   username: obz@delphicraft.net
 #   password: cR38t6qMb$26
-#   page: https://minecraft-server.net/user_cpl/
-  name: planetminecraft.com
-  url: https://www.planetminecraft.com
-  username: obz@delphicraft.net
-  password: cR38t6qMb$26
-  page: https://www.planetminecraft.com/account/manage/servers/4442719/#tab_log
-#   name: serverlist.games
-#   url: https://serverlist.games
-#   login: obz@delphicraft.net
-#   password: cR38t6qMb$26
-#   page: https://serverlist.games/dashboard
-#   name: serverpact.com
-#   url: https://www.serverpact.com
-#   login: delphicraft
-#   password: cR38t6qMb$26
-#   page: https://www.serverpact.com/minecraft-server-timeline.htm
-#   name: topg.org
-#   url: https://topg.org
-#   login: obz@delphicraft.net
-#   password: cR38t6qMb$26
-#   page: https://topg.org/edit_updates-518675
-#   name: mc-servers.com
-#   url: https://mc-servers.com
-#   login: delphicraft
-#   password: cR38t6qMb$26
-#   page: https://mc-servers.com/my_servers?bump=3655
+#   vote_name: obzidi4n
+#   url_login: https://www.planetminecraft.com/account/sign_in/
+#   url_bump: https://www.planetminecraft.com/account/manage/servers/4442719/#tab_log
+#   url_vote: https://www.planetminecraft.com/server/delphicraft-minecraft-factions-smp-survival-mcmmo-rpg/vote/
+  
+#   site: serverlist.games
+#   username: delphicraft
+#   password: Ru4$NQtk&k#ckU5
+#   vote_name: obzidi4n
+#   url_login: https://serverlist.games/en/login
+#   url_bump: https://serverlist.games/en/dashboard
+#   url_vote: https://serverlist.games/en/vote/2365
+
+#   site: serverpact.com
+#   username: delphicraft
+#   password: 8cxdpxsa
+#   vote_name: obzidi4n
+#   url_login: https://www.serverpact.com/inloggen.htm
+#   url_bump: https://www.serverpact.com/minecraft-server-timeline.htm
+#   url_vote: https://www.serverpact.com/vote-25275
+
+  site: topg.org
+  url: https://topg.org
+  username: delphicraft
+  password: '&56VN7drmkbwnQa'
+  vote_name: obzidi4n
+  url_login: https://topg.org/dashboard
+  url_bump: https://topg.org/edit_updates-518675
+  url_vote: https://topg.org/Minecraft/in-518675
+

@@ -27,25 +27,23 @@ class Selenium():
 
     if browser == False:
       chrome_options.add_argument('--headless')
+    
+    if browser == True:
+      chrome_options.add_argument('--window-size=1366×768')
 
     chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--remote-debugging-port=0')
-    chrome_options.add_argument("--disable-dev-shm-usage");
+    chrome_options.add_argument('--remote-debugging-port=9222')
+    chrome_options.add_argument('--disable-dev-shm-usage')
     chrome_options.add_argument('--disable-gpu')
-    chrome_options.add_argument('--window-size=1366×768')
     chrome_options.add_argument('--ignore-certificate-errors')
     chrome_options.add_argument('--user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36')
     chrome_options.add_argument('--homedir={}'.format(tmp_folder))
     chrome_options.add_argument('--data-path={}'.format(tmp_folder + '/data-path'))
     chrome_options.add_argument('--disk-cache-dir={}'.format(tmp_folder + '/cache-dir'))
     chrome_options.add_argument('--user-data-dir={}'.format(tmp_folder + '/user-data'))
-    # chrome_options.add_argument('--hide-scrollbars')
     chrome_options.add_argument('--enable-logging')
     chrome_options.add_argument('--log-level=0')
     chrome_options.add_argument('--log-path={}'.format(tmp_folder + '/chromedriver.log'))
-    # chrome_options.add_argument('--v=99')
-    # chrome_options.add_argument('--single-process')    
-    # chrome_options.binary_location = os.getcwd() + "/bin/headless-chromium"
 
     ## set experimental chromedriver options
     prefs = {
@@ -58,8 +56,10 @@ class Selenium():
 
     chrome_options.add_experimental_option('prefs', prefs)
 
+
     ## instantiate chromedriver
     self._driver = webdriver.Chrome(chrome_options=chrome_options)
+    
 
     ## hack to enable downloads in headless mode
     self._driver.command_executor._commands['send_command'] = (

@@ -1,23 +1,26 @@
+#!/usr/bin/env python
 # encoding: utf-8
 
 import argparse
 from datetime import datetime
 import importlib
 import os
-from notifiers import get_notifier
+import discord_notify as dn
 import shutil
 import traceback
 import uuid
 
-def exception(client_module, xslack, error):
+def exception(client_module, xnotify, error):
 
   message = ':poop: _*' + client_module + '*_ produced an error at ' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + '\n\n' + str(error.args) + '\n\nTraceback:\n```' + traceback.format_exc() + '```'
+
   print(message)
   
-#   if not xslack:
-#     slack = get_notifier('slack')
-#     webhook_url = 'https://hooks.slack.com/services/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'
-#     slack.notify(message=message, webhook_url=webhook_url)
+  if not xnotify:
+    webhook_url = 'https://discord.com/api/webhooks/785293168044015617/B4BZpyx3xFsjiTE0kwQPywGsAjQINOWQ-zMyKqOphZ89nPFdf-sV0BzuYaeqDLuF_MIl'
+    notifier = dn.Notifier(webhook_url)
+    notifier.send(message, print_message=False)
+    
 
 def make_tmp_folders(tmp_folder):
 
@@ -37,24 +40,19 @@ def main():
   parser.add_argument('client_module', help='name of the client module')
   parser.add_argument("-t", "--test", help="run in test mode: disable ftp and slack alerts, preserve tmp folder", action="store_true")
   parser.add_argument("-b", "--browser", help="run selenium with browser", action="store_true")
-  parser.add_argument("-xf", "--xftp", help="disable ftp", action="store_true")
-  parser.add_argument("-xs", "--xslack", help="disable slack alerts ", action="store_true")
+  parser.add_argument("-xd", "--xnotify", help="disable alerts ", action="store_true")
   args = parser.parse_args()
 
   try:
 
-    # check for test mode
+    print('starting', args.client_module, 'test:', args.test, 'browser:', args.browser, 'no notify:', args.xnotify)
+    
+    # test mode?
     if args.test:
-      print('starting', args.client_module, 'in test mode')
-      args.xftp = True
-      args.xslack = True
-    else:
-      print('starting', args.client_module)
-
+      args.xnotify = True
+    
     # import client modules
     client_recipe = importlib.import_module('client_modules.' + args.client_module + '.recipe')
-    # client_etl = importlib.import_module('client_modules.' + args.client_module + '.etl')
-    # client_ftp = importlib.import_module('ftp')
 
     # create tmp folders
     tmp_folder = os.getcwd() + '/tmp/{}'.format(uuid.uuid4())
@@ -64,28 +62,25 @@ def main():
     # run api recipe
     print('starting recipe')
     recipe = client_recipe.Recipe('client_modules/' + args.client_module, tmp_folder, args.browser)
-    print('recipe complete')
-
-#     # run etl
-#     etl = client_etl.Etl('client_modules/' + args.client_module, tmp_folder)
-#     print('etl complete')
-
-#     # run ftp
-#     if args.xftp:
-#       print('ftp skipped')
-#     else:
-#       ftp = client_ftp.Ftp('client_modules/' + args.client_module, tmp_folder)
-#       print('ftp complete')
-
+    print('completed recipe')
+    
     # close session
     if args.test:
-      print('session close skipped')
+      print('tmp folders retained')
     else:
       shutil.rmtree(tmp_folder, ignore_errors=True)
-      print('closed session')
+      print('tmp folders removed')
+        
+    # notify
+    
+    if not args.xnotify:
+        message = (':right_facing_fist: ' + args.client_module + ' completed!')
+        webhook_url = 'https://discord.com/api/webhooks/785293168044015617/B4BZpyx3xFsjiTE0kwQPywGsAjQINOWQ-zMyKqOphZ89nPFdf-sV0BzuYaeqDLuF_MIl'
+        notifier = dn.Notifier(webhook_url)
+        notifier.send(message, print_message=False)
 
   except Exception as error:
-    exception(args.client_module, args.xslack, error)
+    exception(args.client_module, args.xnotify, error)
 
 if __name__== "__main__":
   main()
