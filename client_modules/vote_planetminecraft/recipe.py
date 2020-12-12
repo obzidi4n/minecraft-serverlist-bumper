@@ -8,7 +8,8 @@ class Recipe():
   def __init__(self, client_module, tmp_folder, browser):
     
     # get configs
-    with open(client_module + '/config.yml', 'r') as config:
+    #with open(client_module + 'config.yml', 'r') as config:
+    with open('config.yml', 'r') as config:
       cfg = yaml.full_load(config)
     
     # open session

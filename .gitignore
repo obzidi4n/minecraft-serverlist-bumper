@@ -1,6 +1,6 @@
 ## .gitignore for this repo
 
-.DS_Store
+*.DS_Store
 **/user-data
 **/cache-dir
 *.csv
