@@ -19,5 +19,5 @@ class Recipe():
 
     time.sleep(5)
 
-    api.set_input_value('//input[@name="mcname"]', cfg['vote_name'])
-    api.click('//input[@class="r3submit"]')
+    api.set_input_value('//input[contains(@name,"mcname")]', cfg['vote_name'])
+    api.click('//input[contains(@class,"r3submit")]')
