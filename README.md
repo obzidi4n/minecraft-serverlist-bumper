@@ -2,5 +2,6 @@
 
 ### dependencies:
  
-- [https://pypi.org/project/selenium/](selenium) 
-- discord_notify
+- [selenium](https://pypi.org/project/selenium/)
+- [discord_notify](https://pypi.org/project/discord-notify/)
+- 
