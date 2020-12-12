@@ -17,9 +17,13 @@ class Recipe():
     # vote (no login needed)
     api.get_url(cfg['url_vote'])
 
-    time.sleep(3)
+    time.sleep(5)
+    api.get_screenshot('vote_page')
 
     api.set_input_value('//input[contains(@name,"mcname")]', cfg['vote_name'])
+    api.get_screenshot('vote_name')
+
     api.click('//input[contains(@class,"r3submit")]')
 
-    time.sleep(3)
+    time.sleep(5)
+    api.get_screenshot('vote_result')
