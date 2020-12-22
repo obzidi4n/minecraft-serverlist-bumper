@@ -131,7 +131,7 @@ class Selenium():
     return elem_value.get_attribute('innerHTML')
 
   def get_screenshot(self, filename):
-    self._driver.save_screenshot(tmp_folder + '/screenshots/' + filename)
+    self._driver.save_screenshot(self._tmp_folder + '/screenshots/' + filename + '.png')
 
   def get_url(self, url):
     self._driver.get(url)
