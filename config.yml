@@ -1,16 +1,16 @@
-  site: discordservers.com
-  username: obz@delphicraft.net
-  password: mRhDx2KIeQUAU8%4
-  url_login: https://discordservers.com
-  url_bump: https://discordservers.com/server/210536719844376576/bump
+#   site: discordservers.com
+#   username: obz@delphicraft.net
+#   password: mRhDx2KIeQUAU8%4
+#   url_login: https://discordservers.com
+#   url_bump: https://discordservers.com/server/210536719844376576/bump
 
-#   site: mc-servers.com
-#   username: delphicraft
-#   password: 9#dGHJqdu7Yg2ep
-#   vote_name: obzidi4n
-#   url_login: https://mc-servers.com/login
-#   url_bump: https://mc-servers.com/my_servers?bump=3655
-#   url_vote: https://mc-servers.com/mcvote/3655/
+  site: mc-servers.com
+  username: delphicraft
+  password: 9#dGHJqdu7Yg2ep
+  vote_name: obzidi4n
+  url_login: https://mc-servers.com/login
+  url_bump: https://mc-servers.com/my_servers?bump=3655
+  url_vote: https://mc-servers.com/mcvote/3655/
   
 #   site: minecraft-server.net
 #   username: delphicraft

@@ -13,6 +13,11 @@ class Recipe():
 
     # open browser
     api = Selenium(tmp_folder, browser)
+
+    # cookie nottification
+    api.get_url(cfg['url_login'])
+    time.sleep(3)
+    api.click('//a[@class="cc-btn cc-dismiss"]')
     
     # login
     api.get_url(cfg['url_login'])
