@@ -31,7 +31,9 @@ class Recipe():
 
     # bump
     api.get_url(cfg['url_bump'])
-    time.sleep(3)
+    time.sleep(5)
     
-    api.click('//button[contains(text(),"Give Free Gems!")]')
+    api.click('//button[contains(@class,"Button_btn__2GreU Button_large__1DH7q Button_cta__3kIzZ")]')
     print(cfg['site'] + ' bumped')
+
+
