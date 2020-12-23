@@ -14,6 +14,13 @@ class Recipe():
     # open session
     api = Selenium(tmp_folder, browser)
 
+    # login
+    api.get_url(cfg['url_login'])
+    api.set_input_value('//input[@id="email"]', cfg['username'])
+    api.set_input_value('//input[@id="password"]', cfg['password'])
+    api.click('//input[@name="login"]')
+    time.sleep(5)
+
     # bump (login needed)
     api.get_url(cfg['url_bump'])
     time.sleep(5)
