@@ -14,10 +14,10 @@ class Recipe():
     # open session
     api = Selenium(tmp_folder, browser)
 
-    # vote (no login needed)
-    api.get_url(cfg['url_vote'])
+    # bump (login needed)
+    api.get_url(cfg['url_bump'])
     time.sleep(5)
+    
+    api.click('//a[contains(text(),"Bump Submission")]')
 
-    api.set_input_value('//input[contains(@name,"mcname")]', cfg['vote_name'])
-
-    api.click('//input[contains(@class,"r3submit")]')
+    print(cfg['site'] + ' bumped')
