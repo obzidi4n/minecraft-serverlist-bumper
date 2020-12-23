@@ -55,7 +55,7 @@ def main():
     client_recipe = importlib.import_module('client_modules.' + args.client_module + '.recipe')
 
     # create tmp folders
-    tmp_folder = os.getcwd() + '/tmp/{}'.format(uuid.uuid4())
+    tmp_folder = os.getcwd() + '/browser_cache/{}'.format(uuid.uuid4())
     make_tmp_folders(tmp_folder)
     print('created tmp folder:', tmp_folder)
 
