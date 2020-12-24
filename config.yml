@@ -12,13 +12,13 @@
 #   url_bump: https://mc-servers.com/my_servers?bump=3655
 #   url_vote: https://mc-servers.com/mcvote/3655/
   
-  site: minecraft-server.net
-  username: delphicraft
-  password: UV7tysxhaP9uf9z
-  vote_name: obzidi4n
-  url_bump: https://minecraft-server.net/details/Delphicraft/
-  url_vote: https://minecraft-server.net/vote/delphicraft/
-  url_login: https://minecraft-server.net/user_cpl/
+#   site: minecraft-server.net
+#   username: delphicraft
+#   password: UV7tysxhaP9uf9z
+#   vote_name: obzidi4n
+#   url_bump: https://minecraft-server.net/details/Delphicraft/
+#   url_vote: https://minecraft-server.net/vote/delphicraft/
+#   url_login: https://minecraft-server.net/user_cpl/
 
 #   site: planetminecraft.com
 #   username: obz@delphicraft.net
@@ -28,13 +28,13 @@
 #   url_bump: https://www.planetminecraft.com/account/manage/servers/4442719/#tab_log
 #   url_vote: https://www.planetminecraft.com/server/delphicraft-minecraft-factions-smp-survival-mcmmo-rpg/vote/
   
-#   site: serverlist.games
-#   username: delphicraft
-#   password: Ru4$NQtk&k#ckU5
-#   vote_name: obzidi4n
-#   url_login: https://serverlist.games/en/login
-#   url_bump: https://serverlist.games/en/dashboard
-#   url_vote: https://serverlist.games/en/vote/2365
+  site: serverlist.games
+  username: delphicraft
+  password: Ru4$NQtk&k#ckU5
+  vote_name: obzidi4n
+  url_login: https://serverlist.games/en/login
+  url_bump: https://serverlist.games/en/dashboard
+  url_vote: https://serverlist.games/en/vote/2365
 
 #   site: serverpact.com
 #   username: delphicraft
