@@ -28,13 +28,13 @@
 #   url_bump: https://www.planetminecraft.com/account/manage/servers/4442719/#tab_log
 #   url_vote: https://www.planetminecraft.com/server/delphicraft-minecraft-factions-smp-survival-mcmmo-rpg/vote/
   
-  site: serverlist.games
-  username: delphicraft
-  password: Ru4$NQtk&k#ckU5
-  vote_name: obzidi4n
-  url_login: https://serverlist.games/en/login
-  url_bump: https://serverlist.games/en/dashboard
-  url_vote: https://serverlist.games/en/vote/2365
+#   site: serverlist.games
+#   username: delphicraft
+#   password: Ru4$NQtk&k#ckU5
+#   vote_name: obzidi4n
+#   url_login: https://serverlist.games/en/login
+#   url_bump: https://serverlist.games/en/dashboard
+#   url_vote: https://serverlist.games/en/vote/2365
 
 #   site: serverpact.com
 #   username: delphicraft
@@ -44,12 +44,12 @@
 #   url_bump: https://www.serverpact.com/minecraft-server-timeline.htm
 #   url_vote: https://www.serverpact.com/vote-25275
 
-#   site: topg.org
-#   url: https://topg.org
-#   username: delphicraft
-#   password: '&56VN7drmkbwnQa'
-#   vote_name: obzidi4n
-#   url_login: https://topg.org/dashboard
-#   url_bump: https://topg.org/edit_updates-518675
-#   url_vote: https://topg.org/Minecraft/in-518675
+  site: topg.org
+  url: https://topg.org
+  username: delphicraft
+  password: '&56VN7drmkbwnQa'
+  vote_name: obzidi4n
+  url_login: https://topg.org/dashboard
+  url_bump: https://topg.org/edit_updates-518675
+  url_vote: https://topg.org/Minecraft/in-518675
 

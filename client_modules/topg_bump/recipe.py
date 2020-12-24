@@ -19,10 +19,12 @@ class Recipe():
     api.get_url(cfg['url_login'])
     time.sleep(3)
 
-    # vote (no login needed)
-    api.get_url(cfg['url_vote'])
-    api.set_input_value('//input[@name="mc_user"]', cfg['vote_name'])
-    api.click('//label[contains(@for,"rate-10")]')
+    api.set_input_value('//input[@placeholder="Username"]', cfg['username'])
+    api.set_input_value('//input[contains(@type,"password")]', cfg['password'])
+    api.click('//button[contains(.,"Login")]')
 
-    # solve captcha manually
+    # bump (login needed)
+    api.get_url(cfg['url_bump'])
+
+    # fill text box manually with update info
     time.sleep(300)

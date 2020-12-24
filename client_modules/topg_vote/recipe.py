@@ -10,17 +10,14 @@ class Recipe():
     # get configs
     with open(client_module + '/config.yml', 'r') as config:
       cfg = yaml.full_load(config)
-
-    # open browser
+    
+    # open session
     api = Selenium(tmp_folder, browser)
+    print('opened browser')
 
-    # cookie nottification
+    # vote (no login needed)
     api.get_url(cfg['url_vote'])
     time.sleep(3)
-    api.click('//a[@class="cc-btn cc-dismiss"]')
     
-    # vote (no login needed)
-    api.set_input_value('//input[@id="username"]', cfg['vote_name'])
-
-    # solve captcha manually
-    time.sleep(300)
+    api.set_input_value('//input[@name="mc_username"]', cfg['vote_name'])
+    api.click('//span[contains(.,"Submit your vote")]')
