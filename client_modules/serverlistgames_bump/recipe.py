@@ -19,13 +19,11 @@ class Recipe():
     api.get_url(cfg['url_login'])
     time.sleep(3)
 
-    api.set_input_value('//input[@name="username"]', cfg['username'])
-    api.set_input_value('//input[@name="password"]', cfg['password'])
-    api.click('//button[@type="submit"]')
-    
-    # bump (login needed)
-    api.get_url(cfg['url_bump'])
-    time.sleep(3)
+    api.set_input_value('//input[contains(@name,"username")]', cfg['username'])
+    api.set_input_value('//input[contains(@name,"password")]', cfg['password'])    
+    api.click('//button[@type="submit"][contains(.,"Login")]')
+    time.sleep(5)
 
+    # bump (login needed)
     api.click('//div[@class="card-panel light-green hoverable clickable"][contains(.,"Bump")]')
     print(cfg['site'] + ' bumped')
