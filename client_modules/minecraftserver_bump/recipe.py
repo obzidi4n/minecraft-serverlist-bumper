@@ -28,5 +28,5 @@ class Recipe():
     api.get_url(cfg['url_bump'])
     time.sleep(3)
 
-    api.click('//input[@value="delphicraft"]')
+    api.click('//input[contains(@value,"Bump your Server")]')
     print(cfg['site'] + ' bumped')
