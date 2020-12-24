@@ -15,22 +15,19 @@ class Recipe():
     api = Selenium(tmp_folder, browser)
     print('opened browser')
 
-    api.get_url(cfg['site']['url'])
-    time.sleep(5)
-    
-    api.click('//a[contains(text(),"Sign In")]')
+    # login
+    api.get_url(cfg['url_login'])
+    time.sleep(3)
 
-    api.set_input_value('//input[@id="email"]', cfg['site']['username'])
-    time.sleep(2)
+    api.set_input_value('//input[@class="form-control"][contains(@id,"username")]', cfg['username'])
+    api.set_input_value('//input[@class="form-control"][contains(@id,"password")]', cfg['password'])
+    api.click('//button[contains(.,"Log In")]')
+    print('logged in')
 
-    api.set_input_value('//input[@id="password"]', cfg['site']['password'])
-    time.sleep(30)
+    # bump (login needed)
+    api.get_url(cfg['url_bump'])
+    time.sleep(3)
 
-    ## wait for manual auth and login
-
-    api.get_url(cfg['site']['page'])
-    time.sleep(5)
-    
-    # is this correct?
-    api.click('//a[contains(text(),"Bump Server")]')
+    api.click('//input[contains(@value,'Bump your Server')]')
+    print(cfg['site'] + ' bumped')
     
