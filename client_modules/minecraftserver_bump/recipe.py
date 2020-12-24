@@ -28,5 +28,5 @@ class Recipe():
     api.get_url(cfg['url_bump'])
     time.sleep(3)
 
-    api.click('//input[contains(@value,"Bump your Server")]')
+    api.click('//input[contains(@value,"Bump Server to Top")]')
     print(cfg['site'] + ' bumped')
