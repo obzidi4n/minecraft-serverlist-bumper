@@ -27,5 +27,5 @@ class Recipe():
     api.get_url(cfg['url_bump'])
     time.sleep(3)
 
-    api.click('//h5[contains(.,"Bump")]')
+    api.click('//div[@class="card-panel light-green hoverable clickable"][contains(.,"Bump")]')
     print(cfg['site'] + ' bumped')
