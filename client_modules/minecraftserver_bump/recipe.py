@@ -23,10 +23,8 @@ class Recipe():
     api.set_input_value('//input[@class="form-control"][contains(@id,"password")]', cfg['password'])
     api.click('//button[contains(.,"Log In")]')
     print('logged in')
-
-    # bump (login needed)
-    api.get_url(cfg['url_bump'])
     time.sleep(3)
 
+    # bump (login needed)
     api.click('//input[contains(@value,"Bump Server to Top")]')
     print(cfg['site'] + ' bumped')
