@@ -27,4 +27,4 @@ class Recipe():
     api.get_url(cfg['url_bump'])
 
     # fill text box manually with update info
-    time.sleep(300)
+    time.sleep(90)

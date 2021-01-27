@@ -29,14 +29,14 @@ class Selenium():
       chrome_options.add_argument('--headless')
     
     if browser == True:
-      chrome_options.add_argument('--window-size=1366×768')
+      chrome_options.add_argument('--window-size=1440×764')
 
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--remote-debugging-port=9222')
     chrome_options.add_argument('--disable-dev-shm-usage')
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument('--ignore-certificate-errors')
-    chrome_options.add_argument('--user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36')
+    chrome_options.add_argument('--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36')
     chrome_options.add_argument('--homedir={}'.format(tmp_folder))
     chrome_options.add_argument('--data-path={}'.format(tmp_folder + '/data-path'))
     chrome_options.add_argument('--disk-cache-dir={}'.format(tmp_folder + '/cache-dir'))
@@ -169,7 +169,7 @@ class Selenium():
 
   def set_input_value_keys(self, xpath, value):
     elem_send = self._driver.find_element_by_xpath(xpath)
-    elem_send.clear()
+    #elem_send.clear()
     elem_send.send_keys(getattr(Keys, value))
 
   def set_input_value_css(self, css, value):

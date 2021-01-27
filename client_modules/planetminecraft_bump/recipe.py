@@ -24,7 +24,8 @@ class Recipe():
     # bump (login needed)
     api.get_url(cfg['url_bump'])
     time.sleep(5)
-    
-    api.click('//a[contains(text(),"Bump Submission")]')
 
+    api.get_screenshot('bump_page')
+
+    api.click('//a[contains(@title,"Bump Submission")]')
     print(cfg['site'] + ' bumped')

@@ -26,5 +26,6 @@ class Recipe():
     time.sleep(3)
 
     # bump (login needed)
+    api.scroll_window(0,2000)
     api.click('//input[contains(@value,"Bump Server to Top")]')
     print(cfg['site'] + ' bumped')

@@ -21,4 +21,4 @@ class Recipe():
     api.set_input_value('//input[contains(@id,"username")]', cfg['vote_name'])
 
     # solve captcha manually
-    time.sleep(300)
+    time.sleep(90)

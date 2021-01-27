@@ -25,4 +25,4 @@ class Recipe():
     api.click('//label[contains(@for,"rate-10")]')
 
     # solve captcha manually
-    time.sleep(300)
+    time.sleep(90)
