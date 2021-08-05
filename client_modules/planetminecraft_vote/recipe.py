@@ -20,4 +20,4 @@ class Recipe():
 
     api.set_input_value('//input[contains(@name,"mcname")]', cfg['vote_name'])
 
-    api.click('//input[contains(@class,"r3submit")]')
+    api.click('//input[@class="r3submit site_btn"]')
